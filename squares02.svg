@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg width="2520" height="4145.4" viewBox="0 0 2520 4145.4" xmlns="http://www.w3.org/2000/svg">
+
+    <!-- 1 -->
+    <rect x="0" y="0" width="2520" height="2520" fill="#0f0"/>
+
+    <!-- 1/2 -->
+    <rect x="0" y="2520" width="1260" height="1260" fill="#00f"/>
+
+    <!-- 1/3 -->
+    <rect x="1260" y="2520" width="840" height="840" fill="#f00"/>
+
+    <!-- 1/4 -->
+    <rect x="1260" y="3360" width="630" height="630" fill="#ff0"/>
+
+    <!-- 1/5 -->
+    <rect x="1890" y="3360" width="504" height="504" fill="#0ff"/>
+
+    <!-- 1/6 -->
+    <rect x="2100" y="2520" width="420" height="420" fill="#f0f"/>
+
+    <!-- 1/7 -->
+    <rect x="2100" y="2940" width="360" height="360" fill="#080"/>
+
+    <!-- 1/8 -->
+    <rect x="0" y="3780" width="315" height="315" fill="#800"/>
+
+</svg>

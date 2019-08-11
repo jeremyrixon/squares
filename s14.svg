@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg width="2520" height="4145.23384845753" viewBox="0 0 2520 4145.23384845753" xmlns="http://www.w3.org/2000/svg">
+
+    <rect x="0"         y="0"         width="2520"    height="2520"    fill="#0f0"/>
+    <rect x="0"         y="2520"      width="1260"  height="1260"  fill="#00f"/>
+    <rect x="1260" y="2520"      width="840"  height="840"  fill="#f00"/>
+    <rect x="1260" y="3360" width="630"  height="630"  fill="#ff0"/>
+    <rect x="1890" y="3360" width="504"  height="504"  fill="#0ff"/>
+    <rect x="2100" y="2520"      width="420"  height="420"  fill="#f0f"/>
+    <rect x="2100" y="2940" width="360"  height="360"  fill="#080"/>
+    <rect x="2100" y="2940" width="360"  height="360"  fill="#080"/>
+    <rect x="0"         y="3780" width="315"  height="315"  fill="#800"/>
+    <rect x="315" y="3780" width="280"  height="280"  fill="#008"/>
+    <rect x="595" y="3780" width="252" height="252" fill="#088"/>
+    <rect x="847" y="3780" width="229.0909090909091" height="229.0909090909091" fill="#880"/>
+    <rect x="1890" y="3864" width="210" height="210" fill="#808"/>
+    <rect x="2100" y="3864" width="193.84615384615384" height="193.84615384615384" fill="#400"/>
+    <rect x="1076.090909090909" y="3780" width="180" height="180" fill="#040"/>
+    
+    <text x="1260" y="1260" alignment-baseline="middle" font-size="302" text-anchor="middle">1</text>
+    <text x="630" y="3150" alignment-baseline="middle" font-size="176" text-anchor="middle">2</text>
+    <text x="1680" y="2940" alignment-baseline="middle" font-size="134" text-anchor="middle">3</text>
+    <text x="1575" y="3675" alignment-baseline="middle" font-size="113" text-anchor="middle">4</text>
+    <text x="2142" y="3612" alignment-baseline="middle" font-size="100.4" text-anchor="middle">5</text>
+    <text x="2310" y="2730" alignment-baseline="middle" font-size="92" text-anchor="middle">6</text>
+    <text x="2280" y="3120" alignment-baseline="middle" font-size="86" text-anchor="middle">7</text>
+    <text x="157.5" y="3937.5" alignment-baseline="middle" font-size="81.5" text-anchor="middle">8</text>
+    <text x="455" y="3920" alignment-baseline="middle" font-size="78" text-anchor="middle">9</text>
+    <text x="721" y="3906" alignment-baseline="middle" font-size="75.2" text-anchor="middle">10</text>
+    <text x="961.5454545454545" y="3894.5454545454545" alignment-baseline="middle" font-size="72.9090909090909" text-anchor="middle">11</text>
+    <text x="1995" y="3969" alignment-baseline="middle" font-size="71" text-anchor="middle">12</text>
+    <text x="2196.923076923077" y="3960.923076923077" alignment-baseline="middle" font-size="69.38461538461539" text-anchor="middle">13</text>
+    <text x="1166.090909090909" y="3870" alignment-baseline="middle" font-size="68" text-anchor="middle">14</text>
+</svg>
