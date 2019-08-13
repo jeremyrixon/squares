@@ -1,6 +1,6 @@
 
 
-w=9 * 5 * 7 * 11 * 13 * 17 * 19;
+w=3 * 5 * 7 * 11 * 13;
 h=w * Math.PI * Math.PI / 6;
 fontsize=w/40;
 
@@ -12,7 +12,6 @@ colours = [
     "#ff0",
     "#0ff",
     "#f0f",
-    "#080",
     "#080",
     "#800",
     "#008",
@@ -44,68 +43,7 @@ function below(s, o) {
     hs[s] = w/s;
 }
 
-
-right(1, 0);
-below(1, 0);
-
-right(2, 0);
-below(2, 1);
-
-right(3, 2);
-below(3, 1);
-
-right(4, 2);
-below(4, 3);
-
-right(5, 4);
-below(5, 3);
-
-right(6, 3);
-below(6, 1);
-
-right(7, 3);
-below(7, 6);
-
-right(8, 0);
-below(8, 2);
-
-right(9, 8);
-below(9, 2);
-
-right(10, 9);
-below(10, 2);
-
-right(11, 10);
-below(11, 2);
-
-right(12, 4);
-below(12, 5);
-
-right(13, 12);
-below(13, 5);
-
-right(14, 11);
-below(14, 2);
-
-right(15, 11);
-below(15, 14);
-
-right(16, 13);
-below(16, 5);
-
-right(17, 15);
-below(17, 4);
-
-right(18, 17);
-below(18, 4);
-
-right(19, 18);
-below(19, 4);
-
-right(20, 19);
-below(20, 4);
-
-let n=20;
+let n = 0;
 
 function check(s) {
 
@@ -149,20 +87,25 @@ function check(s) {
 
 function auto(s) {
     for(let above = 0; above <= n; above++) {
-        for(let left = 0; left <= above; left++) {
+        for(let left = 0; left <= n; left++) {
             below(s,above);
             right(s,left);
             if (check(s) === true) {
-                return;
+                return true;
             }
         }
     }
+    return `Couldn't find spot for ${s}`;
 }
 
 
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 200; i++) {
     let s = n + 1;
-    auto(s);
+    let r = auto(s);
+    if (r !== true) {
+        console.log(r);
+        break;
+    }
     n = s;
 }
 
@@ -176,9 +119,10 @@ for (let i = 1; i <= n; i++) {
 s=`<svg xmlns="http://www.w3.org/2000/svg" width="${1000}" height="${1000 * Math.PI * Math.PI / 6}" viewBox="0 0 ${w} ${h}">`;
 
 for (i = 1; i <= n; i++) {
+    let fs = Math.min(fontsize,hs[i]/2);
     s += `
         <rect x="${xs[i]}" y="${ys[i]}" width="${ws[i]}" height="${hs[i]}" fill="${colours[i % colours.length]}"/>
-        <text x="${xs[i]+ws[i]/2}" y="${ys[i]+(hs[i]+fontsize/2)/2}" alignment-baseline="middle" font-size="${fontsize}" text-anchor="middle">${i}</text>
+        <text x="${xs[i]+ws[i]/2}" y="${ys[i]+(hs[i]+fs/2)/2}" alignment-baseline="middle" font-size="${fs}" text-anchor="middle">${i}</text>
     `;
 }
 
@@ -186,5 +130,5 @@ s+=`</svg>`;
 
 fs = require('fs');
 
-fs.writeFileSync("s.svg", s)
+fs.writeFileSync("squares3.svg", s)
 
