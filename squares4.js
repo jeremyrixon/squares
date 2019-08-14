@@ -85,10 +85,32 @@ function check(s) {
     return true;
 }
 
+function next_lower(s) {
+    let found = false;
+    let l = 0;
+    for (let i = 0; i <= n; i++) {
+        let ysi_plus_hsi = ys[i] + hs[i];
+        let yss_plus_hss = ys[s] + hs[s];
+        let ysl_plus_hsl = ys[l] + hs[l];
+
+        if (ysi_plus_hsi > yss_plus_hss) {
+            if (!found) {
+                found = true;
+                l = i;
+            } else {
+                if (ysi_plus_hsi < ysl_plus_hsl) {
+                    l = i;
+                }
+            }
+        }
+    }
+    return [found, l];
+}
+
 function auto(s) {
-    for(let above = 0; above <= n; above++) {
+    for(let above = [true, 0]; above[0]; above=next_lower(above[1])) {
         for(let left = 0; left <= n; left++) {
-            below(s,above);
+            below(s,above[1]);
             right(s,left);
             if (check(s) === true) {
                 return true;
@@ -99,7 +121,8 @@ function auto(s) {
 }
 
 
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 2000; i++) {
+    console.log(i);
     let s = n + 1;
     let r = auto(s);
     if (r !== true) {
@@ -130,5 +153,5 @@ s+=`</svg>`;
 
 fs = require('fs');
 
-fs.writeFileSync("squares3.svg", s)
+fs.writeFileSync("squares4.svg", s)
 
